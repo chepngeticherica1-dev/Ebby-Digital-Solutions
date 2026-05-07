@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAISHA LOANS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+/* TOPBAR */
+
+.topbar{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.topbar span{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* MAIN */
+
+.main{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.application-card{
+    width:100%;
+    max-width:950px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:24px;
+    padding:35px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* HEADER */
+
+.header{
+    margin-bottom:35px;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#94a3b8;
+    line-height:1.6;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+/* SECTION */
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h2{
+    font-size:18px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* FORM */
+
+.input-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.06);
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+select:focus{
+    background:rgba(255,255,255,0.1);
+    border:1px solid #38bdf8;
+}
+
+/* CHECKBOX */
+
+.checkbox{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:10px;
+}
+
+.checkbox input{
+    width:auto;
+    margin-top:4px;
+}
+
+.checkbox label{
+    margin:0;
+    color:#94a3b8;
+    line-height:1.5;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    opacity:0.95;
+}
+
+/* RESULT */
+
+.result{
+    margin-top:25px;
+    padding:18px;
+    border-radius:14px;
+    display:none;
+}
+
+.success{
+    background:rgba(22,163,74,0.2);
+    border:1px solid rgba(22,163,74,0.4);
+}
+
+.fail{
+    background:rgba(239,68,68,0.2);
+    border:1px solid rgba(239,68,68,0.4);
+}
+
+.result h3{
+    margin-bottom:10px;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:16px;
+}
+
+.stat h4{
+    color:#94a3b8;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.stat h2{
+    font-size:24px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .application-card{
+        padding:25px;
+    }
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .topbar{
+        padding:18px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+    <div class="logo">MAISHA LOANS</div>
+    <span>Smart Digital Lending Platform</span>
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="application-card">
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <h1>Loan Application</h1>
+        <p>
+            Complete your application below. Approval is based on your income,
+            employment status, and internal credit scoring assessment.
+        </p>
+    </div>
+
+    <!-- PERSONAL + EMPLOYMENT -->
+
+    <div class="grid">
+
+        <div class="section">
+
+            <h2>Personal Information</h2>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="John Doe">
+            </div>
+
+            <div class="input-group">
+                <label>National ID Number</label>
+                <input type="text" id="idno" placeholder="12345678">
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone" placeholder="+2547XXXXXXXX">
+            </div>
+
+            <div class="input-group">
+                <label>Location</label>
+                <input type="text" id="location" placeholder="Nairobi, Kenya">
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Employment & Income</h2>
+
+            <div class="input-group">
+                <label>Employment Status</label>
+
+                <select id="employment">
+                    <option value="employed">Employed</option>
+                    <option value="self">Self Employed</option>
+                    <option value="unemployed">Unemployed</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Monthly Income (KES)</label>
+                <input type="number" id="income" placeholder="50000">
+            </div>
+
+            <div class="input-group">
+                <label>M-Pesa Number</label>
+                <input type="text" id="mpesa" placeholder="2547XXXXXXXX">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LOAN DETAILS -->
+
+    <div class="section">
+
+        <h2>Loan Request</h2>
+
+        <div class="grid">
+
+            <div class="input-group">
+                <label>Loan Amount (KES)</label>
+                <input type="number" id="amount" placeholder="10000">
+            </div>
+
+            <div class="input-group">
+                <label>Repayment Period</label>
+
+                <select id="term">
+                    <option value="7">7 Days</option>
+                    <option value="14">14 Days</option>
+                    <option value="30">30 Days</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- AGREEMENT -->
+
+    <div class="section">
+
+        <h2>Terms & Agreement</h2>
+
+        <div class="checkbox">
+            <input type="checkbox" id="agree">
+
+            <label>
+                I confirm that the information provided is accurate and I agree
+                to MAISHA LOANS lending terms, repayment conditions, and privacy policy.
+            </label>
+        </div>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <button class="btn" onclick="submitLoan()">
+        Submit Loan Application
+    </button>
+
+    <!-- RESULT -->
+
+    <div id="resultBox" class="result">
+        <h3 id="statusTitle"></h3>
+        <p id="statusText"></p>
+    </div>
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="stat">
+            <h4>Maximum Limit</h4>
+            <h2>KES 50,000</h2>
+        </div>
+
+        <div class="stat">
+            <h4>Interest Rate</h4>
+            <h2>10%</h2>
+        </div>
+
+        <div class="stat">
+            <h4>Approval Speed</h4>
+            <h2>~2 Min</h2>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function submitLoan(){
+
+    let name = document.getElementById("name").value;
+    let idno = document.getElementById("idno").value;
+    let phone = document.getElementById("phone").value;
+    let income = Number(document.getElementById("income").value);
+    let amount = Number(document.getElementById("amount").value);
+    let agree = document.getElementById("agree").checked;
+
+    if(!name || !idno || !phone || !income || !amount){
+        return alert("Please complete all required fields");
+    }
+
+    if(!agree){
+        return alert("Please accept terms and conditions");
+    }
+
+    // CREDIT SCORING
+
+    let score = 0;
+
+    if(income >= 50000){
+        score += 40;
+    } else if(income >= 20000){
+        score += 25;
+    } else {
+        score += 10;
+    }
+
+    if(amount <= income * 0.5){
+        score += 30;
+    } else {
+        score += 10;
+    }
+
+    let employment =
+        document.getElementById("employment").value;
+
+    if(employment === "employed"){
+        score += 20;
+    } else if(employment === "self"){
+        score += 15;
+    } else {
+        score += 5;
+    }
+
+    let resultBox = document.getElementById("resultBox");
+    let title = document.getElementById("statusTitle");
+    let text = document.getElementById("statusText");
+
+    resultBox.style.display = "block";
+
+    if(score >= 60){
+
+        resultBox.className = "result success";
+
+        title.innerText = "Application Approved";
+
+        text.innerHTML =
+        `
+        Congratulations ${name}. Your application has been pre-approved.<br><br>
+        Credit Score: <strong>${score}</strong><br>
+        Requested Amount: <strong>KES ${amount}</strong><br>
+        Status: <strong>Awaiting Disbursement</strong>
+        `;
+
+    } else {
+
+        resultBox.className = "result fail";
+
+        title.innerText = "Application Rejected";
+
+        text.innerHTML =
+        `
+        Unfortunately your application did not meet the minimum lending requirements.<br><br>
+        Credit Score: <strong>${score}</strong><br>
+        Status: <strong>Rejected</strong>
+        `;
+    }
+
+}
+
+</script>
+
+</body>
+</html>
