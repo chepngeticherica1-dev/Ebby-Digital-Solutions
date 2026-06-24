@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebby Digital Solutions Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>EBBY DIGITAL SOLUTIONS</h2>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="projects.html">Projects</a>
+<a href="uploads.html">Uploads</a>
+<a href="quote.html">Quotes</a>
+<a href="my-quotes.html">My Quotes</a>
+<a href="my-invoices.html">Invoices</a>
+<a href="profile.html">Profile</a>
+</nav>
+
+</header>
+
+<section>
+
+<h1 id="welcomeMessage">
+Welcome Back
+</h1>
+
+<p>
+Manage your projects, quotes, files and invoices from one place.
+</p>
+
+<div class="dashboard-links">
+
+<a href="projects.html" class="btn">
++ New Project
+</a>
+
+<a href="uploads.html" class="btn">
++ Upload Files
+</a>
+
+<a href="quote.html" class="btn">
++ Request Quote
+</a>
+
+<a href="my-quotes.html" class="btn">
+View Quotes
+</a>
+
+<a href="my-invoices.html" class="btn">
+View Invoices
+</a>
+
+<a href="profile.html" class="btn">
+My Profile
+</a>
+
+<a href="#" onclick="logout()" class="btn">
+Logout
+</a>
+
+</div>
+
+<h2>Business Overview</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Projects</h3>
+<p id="projectCount">0</p>
+</div>
+
+<div class="card">
+<h3>Uploaded Files</h3>
+<p id="fileCount">0</p>
+</div>
+
+<div class="card">
+<h3>Notifications</h3>
+<p id="notificationCount">0</p>
+</div>
+
+<div class="card">
+<h3>Total Quotes</h3>
+<p id="quoteCount">0</p>
+</div>
+
+<div class="card">
+<h3>Total Invoices</h3>
+<p id="invoiceCount">0</p>
+</div>
+
+</div>
+
+<h2>Recent Projects</h2>
+
+<div id="projectList" class="cards">
+
+<div class="card">
+<h3>Loading Projects...</h3>
+</div>
+
+</div>
+
+<h2>Recent Notifications</h2>
+
+<div id="notificationList" class="cards">
+
+<div class="card">
+<h3>No Notifications</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Ebby Digital Solutions
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

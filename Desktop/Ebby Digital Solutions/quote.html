@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Quote</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>EBBY DIGITAL SOLUTIONS</h2>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="my-quotes.html">My Quotes</a>
+</nav>
+
+</header>
+
+<section>
+
+<h1>Request a Quote</h1>
+
+<form id="quoteForm">
+
+<select id="quoteService" required>
+
+<option value="">
+Select Service
+</option>
+
+<option value="5000">
+Website Design
+</option>
+
+<option value="500">
+Logo Design
+</option>
+
+<option value="1000">
+Video Editing
+</option>
+
+<option value="500">
+CV Writing
+</option>
+
+<option value="3000">
+Digital Marketing
+</option>
+
+</select>
+
+<input
+type="number"
+id="quantity"
+value="1"
+min="1"
+required>
+
+<div class="card">
+
+<h3>Estimated Cost</h3>
+
+<h2 id="estimatedPrice">
+KES 0
+</h2>
+
+</div>
+
+<button type="submit">
+Submit Quote Request
+</button>
+
+</form>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
